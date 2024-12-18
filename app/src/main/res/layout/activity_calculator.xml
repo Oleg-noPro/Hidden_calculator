@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <LinearLayout
+        android:id="@+id/lineralLayoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/firstOperandET"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/first_operand"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/secondOperandET"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/second_operand"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineralLayoutInput">
+
+        <Button
+            android:id="@+id/sumBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sum_text"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/subBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_text"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/multBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mult_text"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/divBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/div_text"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resultBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_button"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
